@@ -41,5 +41,12 @@ nginx -s stop  停止nginx服务
 ### 运行
 * cd bin
 * ./ChatServer 192.168.117.132 6000 （自己主机的ip地址，和绑定的端口号）
+## 整体结构
+* 头文件在include文件夹中，.cpp文件在src中
+* dbPool是实现了一个MySQL数据库连接池
+* model是封装了数据库中各个表的实际操作
+* net是封装了查看muduo库实现的一个网络库
+* redis封装了redis的连接、订阅发布的基本操作
+* msg.h 是聊天协议的约定
 # 客户端在Windows环境下利用qt编写。
 * 地址： 
