@@ -22,17 +22,16 @@ nginx -s stop  停止nginx服务
 * sudo make install、
 * ```
   zd@zd-virtual-machine:~/github/hiredis$ sudo make install
- [sudo] zd 的密码： 
-mkdir -p /usr/local/include/hiredis /usr/local/include/hiredis/adapters 
-/usr/local/lib
- cp -pPR hiredis.h async.h read.h sds.h sslio.h /usr/local/include/hiredis
- cp -pPR adapters/*.h /usr/local/include/hiredis/adapters
- cp -pPR libhiredis.so /usr/local/lib/libhiredis.so.0.14
- cd /usr/local/lib && ln -sf libhiredis.so.0.14 libhiredis.so
- cp -pPR libhiredis.a /usr/local/lib
- mkdir -p /usr/local/lib/pkgconfig
- cp -pPR hiredis.pc /usr/local/lib/pkgconfig
-
+  [sudo] zd 的密码： 
+  mkdir -p /usr/local/include/hiredis /usr/local/include/hiredis/adapters 
+  /usr/local/lib
+  cp -pPR hiredis.h async.h read.h sds.h sslio.h /usr/local/include/hiredis
+  cp -pPR adapters/*.h /usr/local/include/hiredis/adapters
+  cp -pPR libhiredis.so /usr/local/lib/libhiredis.so.0.14
+  cd /usr/local/lib && ln -sf libhiredis.so.0.14 libhiredis.so
+  cp -pPR libhiredis.a /usr/local/lib
+  mkdir -p /usr/local/lib/pkgconfig
+  cp -pPR hiredis.pc /usr/local/lib/pkgconfig
   ```
 * 拷贝生成的动态库到/usr/local/lib目录下：sudo ldconfig /usr/local/lib
 ## MySQL数据库配置修改etc中的mysql.cof
