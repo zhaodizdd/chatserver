@@ -19,3 +19,10 @@ nginx -s stop  停止nginx服务
 * git clone https://github.com/redis/hiredis
 * cd hiredis、make、sudo make install、sudo ldconfig /usr/local/lib
 ## MySQL数据库配置修改etc中的mysql.cof
+## 编译和运行
+### 编译
+* ./autobuild.sh
+### 运行
+* cd bin
+* ./ChatServer 192.168.117.132 6000 （自己主机的ip地址，和绑定的端口号）
+# 客户端在Windows环境下利用qt写的在：
