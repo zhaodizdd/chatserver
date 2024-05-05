@@ -20,7 +20,7 @@ nginx -s stop  停止nginx服务
 * cd hiredis、
 * make、
 * sudo make install、
-* ```
+  ```
   zd@zd-virtual-machine:~/github/hiredis$ sudo make install
   [sudo] zd 的密码： 
   mkdir -p /usr/local/include/hiredis /usr/local/include/hiredis/adapters 
