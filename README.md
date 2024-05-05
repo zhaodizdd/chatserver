@@ -41,4 +41,5 @@ nginx -s stop  停止nginx服务
 ### 运行
 * cd bin
 * ./ChatServer 192.168.117.132 6000 （自己主机的ip地址，和绑定的端口号）
-# 客户端在Windows环境下利用qt写的在：
+# 客户端在Windows环境下利用qt编写。
+* 地址： 
