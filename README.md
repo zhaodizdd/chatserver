@@ -11,8 +11,8 @@
 * zd@zd-virtual-machine:/usr/local/nginx$ ls 
 conf  html  logs  sbin
 可执行文件在sbin目录里面，配置文件在conf目录里面。 
-nginx -s reload   重新加载配置文件启动 
-nginx -s stop  停止nginx服务
+sudo ./nginx -s reload   重新加载配置文件启动 
+sudo ./nginx -s stop  停止nginx服务
 ## redis环境安装和配置
 * sudo apt-get install redis-server   # ubuntu命令安装redis服务
 * 下载C++对应的hiredis
