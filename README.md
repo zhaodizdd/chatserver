@@ -49,4 +49,4 @@ nginx -s stop  停止nginx服务
 * redis封装了redis的连接、订阅发布的基本操作
 * msg.h 是聊天协议的约定
 # 客户端在Windows环境下利用qt编写。
-* 地址： 
+* 地址： git@github.com:zhaodizdd/chatclient.git
