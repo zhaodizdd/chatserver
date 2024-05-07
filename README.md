@@ -10,7 +10,29 @@
 * zd@zd-virtual-machine:~/package/nginx-1.12.2$ cd /usr/local/nginx/ 
 * zd@zd-virtual-machine:/usr/local/nginx$ ls 
 conf  html  logs  sbin
-可执行文件在sbin目录里面，配置文件在conf目录里面。 
+可执行文件在sbin目录里面，配置文件在conf目录里面。
+cd conf ，vim nginx.conf
+在events{
+  worker_connections  1024;
+}下面插入：
+```
+# nginx tcp loadbalance config
+stream {
+    upstream MyServer{
+    # 这里因为是个人开发，配置的服务器是自己电脑的不同端口
+	  server 192.168.117.132:6000 weight=1 max_fails=3 fail_timeout=30s;
+	  server 192.168.117.132:6002 weight=1 max_fails=3 fail_timeout=30s;
+    }
+
+  server {
+	proxy_connect_timeout 1s;
+	#proxy_timeout 3s;
+	listen 8000; # 监听的端口
+	proxy_pass MyServer;
+	tcp_nodelay on;
+  }
+}   
+```
 sudo ./nginx -s reload   重新加载配置文件启动 
 sudo ./nginx -s stop  停止nginx服务
 ## redis环境安装和配置
